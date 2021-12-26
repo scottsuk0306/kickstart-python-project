@@ -1,0 +1,2 @@
+1. Navigate to FILEPATH
+2. Create folder with project name
