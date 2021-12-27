@@ -38,10 +38,4 @@ except Exception as e:
     isCreated = False
 
 if isCreated:
-    print("Succesfully created repository {}".format(folderName))
-
-
-# for repo in g.get_user().get_repos():
-#    print(repo.name)
-
-# print("Succesfully created repository {}".format(folderName))
+    print("Succesfully created repository {}".format(projectName))
