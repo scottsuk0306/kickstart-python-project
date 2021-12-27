@@ -27,11 +27,18 @@ projectName = folderName
 g = Github(token)
 user = g.get_user()
 
+isCreated = True
+
 try:
     user.create_repo(projectName)
-except github.GithubException.GithubException:
-repo = user.create_repo(projectName)
-print("Succesfully created repository {}".format(folderName))
+except Exception as e:
+    print("Exception Occured!")
+    if e.status == 422:
+        print("Repository of the name {} already exists.".format(projectName))
+    isCreated = False
+
+if isCreated:
+    print("Succesfully created repository {}".format(folderName))
 
 
 # for repo in g.get_user().get_repos():
