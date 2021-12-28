@@ -31,6 +31,8 @@ def create():
     
     if isCreated:
         print("Succesfully created repository {}".format(folderName))
+    else:
+        print("Failed creating the repository {}".format(folderName))
 
 if __name__ == "__main__":
     create()
